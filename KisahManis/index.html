@@ -30,7 +30,7 @@
 
         <div class="navbar-extra">
             <a href="#" id="search-button"> <i data-feather="search"></i> </a>
-            <a href="#" id="cart"> <i data-feather="shopping-cart"></i> </a>
+            <a href="#" id="shopping-cart-button"> <i data-feather="shopping-cart"></i> </a>
             <a href="#" id="hamburger-menu"> <i data-feather="menu"></i> </a>
         </div>
 
@@ -39,6 +39,37 @@
             <input type="search" id="search-box" placeholder="Cari disini :)">
             <label for="search-box"><i data-feather="search"></i></label>
         </div>
+
+        <!-- Shopping cart Start -->
+         <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="gambar/coffe-bean1.jpg" alt="Kopi hijau">
+                <div class="item-detail">
+                    <h3>Kopi Hijau</h3>
+                    <div class="item-price">IDR 30 K</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+            
+            <div class="cart-item">
+                <img src="gambar/coffe-bean2.jpg" alt="Kopi coklat">
+                <div class="item-detail">
+                    <h3>Kopi coklat</h3>
+                    <div class="item-price">IDR 25 K</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="gambar/coffe-bean3.jpg" alt="Kopi plain">
+                <div class="item-detail">
+                    <h3>Kopi plain</h3>
+                    <div class="item-price">IDR 20 K</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+         </div>
+        <!-- Shopping cart End -->
     </nav>
     <!-- Navbar end -->
 
@@ -107,7 +138,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button-A"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-img">
                     <img src="gambar/coffe-bean1.jpg" alt="Kopi hijau">
@@ -129,7 +160,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button-B"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-img">
                     <img src="gambar/coffe-bean2.jpg" alt="Kopi coklat">
@@ -151,7 +182,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button-C"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-img">
                     <img src="gambar/coffe-bean3.jpg" alt="Kopi Plain">
@@ -219,13 +250,89 @@
      </footer>
     
     <!-- Footer section End -->
+
+    <!-- Modal box item detail Start -->
+     <div class="modal" id="item-detail-modal-A">  <!-- lapisan warna transparan modal box  -->
+        <div class="modal-container-A">
+            <a href="#" class="close-icon-A"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="gambar/coffe-bean1.jpg" alt="Kopi hijau">
+                <div class="product-desc">
+                    <h3>Kopi hijau</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit, itaque neque non, deserunt ullam suscipit illum nobis quidem repudiandae a, possimus natus saepe aut.</p>
+                    <div class="product-stars">
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 25K <span>IDR 50K</span>
+                    </div>
+                    <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="modal" id="item-detail-modal-B">
+        <div class="modal-container-B">
+            <a href="#" class="close-icon-B"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="gambar/coffe-bean2.jpg" alt="Kopi coklat">
+                <div class="product-desc">
+                    <h3>Kopi coklat</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit, itaque neque non, deserunt ullam suscipit illum nobis quidem repudiandae a, possimus natus saepe aut.</p>
+                    <div class="product-stars">
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 25K <span>IDR 50K</span>
+                    </div>
+                    <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="item-detail-modal-C">
+        <div class="modal-container-C">
+            <a href="#" class="close-icon-C"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="gambar/coffe-bean3.jpg" alt="Kopi plain">
+                <div class="product-desc">
+                    <h3>Kopi plain</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit, itaque neque non, deserunt ullam suscipit illum nobis quidem repudiandae a, possimus natus saepe aut.</p>
+                    <div class="product-stars">
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 25K <span>IDR 50K</span>
+                    </div>
+                    <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Modal box item detail End -->
+
     <!-- feather icon JS -->
     <script>
         feather.replace();
     </script>
 
     <!-- Javascript -->
-     <script src="JS/script.js">
-     </script>
+     <script src="JS/script.js"></script>
 </body>
 </html>
